@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'expressqa'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9E8D769059564076B7BCC2BB0D105E58 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6F8B3886CA644A9BB89FB1EA1878F802 }}
           package: .
