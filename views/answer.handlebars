@@ -1,0 +1,12 @@
+<h4>{{title}}</h4>
+
+{{#each answer}}
+  <div style="background:#e8f0f0 ;">
+      <li style="color:black; margin:0;"> {{this.answer}}</li>
+  </div>
+{{/each}}
+
+<br>
+<div style="background: #5a695677; width:max-content; padding:2px; position:absolute; right:0">
+<a style="padding:6px;text-decoration: none; color:rgb(88, 97, 104);" href= "/write_answer?id={{this.question_id}}">write your answer (click here)<br> (can write only one answer so be carefull)</a>
+</div>
