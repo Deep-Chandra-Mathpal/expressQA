@@ -7,7 +7,7 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var text_analyticsRouter = require('./routes/text_analytics');
 var questionRouter = require('./routes/question');
 var answerRouter = require('./routes/answer');
 var loginRouter = require('./routes/login');
@@ -15,6 +15,8 @@ var signupRouter = require('./routes/signup');
 var write_answerRouter = require('./routes/write_answer');
 var add_questionRouter = require('./routes/add_question');
 var user_questionsRouter = require('./routes/user_questions');
+var statusRouter = require('./routes/status');
+var aboutRouter = require('./routes/about');
 var app = express();
 
 app.engine('handlebars', engine());
@@ -35,8 +37,8 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', questionRouter);
+app.use('/text_analytics', text_analyticsRouter);
 app.use('/question', questionRouter);
 app.use('/answer', answerRouter);
 app.use('/login', loginRouter);
@@ -44,5 +46,7 @@ app.use('/signup', signupRouter);
 app.use('/write_answer', write_answerRouter);
 app.use('/add_question', add_questionRouter);
 app.use('/user_questions', user_questionsRouter);
+app.use('/status', statusRouter);
+app.use('/about', aboutRouter);
 
 module.exports = app;

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const db = require('../database');
+const pool = require('../database');
 
 var q_id;
 
@@ -20,11 +20,14 @@ router.post('/', function (req, res, next) {
 	if (question.length>0) {
         session=req.session;
             if(req.session.loggedin == true) {
-                db.query('insert into q_table(u_id,question) values(?,?)', [req.session.u_id, question], function(error, results, fields) {
+                pool.getConnection(function(err, conn){
+                conn.query('insert into q_table(u_id,question) values(?,?)', [req.session.u_id, question], function(error, results, fields) {
+                conn.release();
                 res.redirect(`/question`);
 				res.end();
                 });
-        }
+            });
+            }
         else {
             res.redirect('./login');
         }

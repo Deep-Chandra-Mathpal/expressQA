@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const db = require('../database');
+const pool = require('../database');
 
 var q_id;
 
@@ -21,7 +21,9 @@ router.post('/', function (req, res, next) {
 	if (answer.length>0) {
         session=req.session;
             if(req.session.loggedin == true) {
-                db.query('insert into a_table values(?,?,?)', [q_id, req.session.u_id, answer], function(error, results, fields) {
+                pool.getConnection(function(err, conn){
+                conn.query('insert into a_table values(?,?,?)', [q_id, req.session.u_id, answer], function(error, results, fields) {
+                    conn.release();
                 if(error != null){
                     res.send("<h3>sorry, you can answer only once<h3>");
                 }
@@ -30,6 +32,7 @@ router.post('/', function (req, res, next) {
                 }
 				res.end();
                 });
+            });
         }
         else {
             res.redirect('./login');

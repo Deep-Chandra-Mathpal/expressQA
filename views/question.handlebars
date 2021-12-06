@@ -1,19 +1,25 @@
 
-<div class="about">
+<div class="about" style=" background-color: rgb(71, 74, 102);padding:5px;">
   <center><img src= "images/logo.png" style="width: 250px; padding:5px;" ></center>
-  <p style="text-align: center; padding: 15px">
-    Emotional support has emerged in contemporary research as a significant component to establishing and maintaining close relationships, and is thought to play a critical role in children’s development. Emotional support has been defined in a number of ways, but the various definitions contain some commonalities. Emotional support refers to expressions of concern and care for another person, especially in times of distress and difficulty. In doing so, someone providing emotional support will offer sympathy, express concern, and display compassion and love for another. As such, emotional support: addresses matters residing at the core of our being; our sense of self, the things we aspire to, our hopes, our fears, and our deepest feelings. Being emotionally supportive may involve helping someone who is distressed by “listening to, empathizing with, legitimizing, and actively exploring their feelings”. Expressions of emotional support aim to relieve a person’s distress, and offer sympathy and nurturance. In particular, because stress and emotional hurt often stem from the invalidation of self, either directly (e.g., rejection by a valued other) or indirectly (e.g., failing at something connected to one’s self-concept), expressions of encouragement, compassion, compliment, appreciation, reassurance, and respect—often regarded as appraisal, ego, or esteem support—can be conceptualized as forms of emotional support.
+  <p style="text-align: center; padding: 15px; color:rgb(209, 219, 226)">
+    Emotional support has emerged in contemporary research as a significant component to establishing and maintaining close relationships, and is thought to play a critical role in children’s development.
+     Emotional support has been defined in a number of ways, but the various definitions contain some commonalities. Emotional support refers to expressions of concern and care for another person, especially in times of distress and difficulty.
+      In doing so, someone providing emotional support will offer sympathy, express concern, and display compassion and love for another.
+       As such, emotional support: addresses matters residing at the core of our being; our sense of self, the things we aspire to, our hopes, our fears, and our deepest feelings.
+        Being emotionally supportive may involve helping someone who is distressed by “listening to, empathizing with, legitimizing, and actively exploring their feelings”.
+         Expressions of emotional support aim to relieve a person’s distress, and offer sympathy and nurturance.
+          In particular, because stress and emotional hurt often stem from the invalidation of self, either directly (e.g., rejection by a valued other) or indirectly (e.g., failing at something connected to one’s self-concept), expressions of encouragement, compassion, compliment, appreciation, reassurance, and respect—often regarded as appraisal, ego, or esteem support—can be conceptualized as forms of emotional support.
   </p>
 </div>
-
+<br>
+<h4>{{title}}</h4>
 {{#each questions}}
 <div onclick="location.href='/answer?id={{this.q_id}}';" style="cursor: pointer;" class="col">
-  <div style="background:#c9ecec ;">
-      <li style="color:black"><i>{{this.question}}</i></li>
+  <div>
+    <!-- style="background:#e8f0f0 ;" -->
+      <li style="color:rgb(51, 49, 49)"><i><b>{{this.question}}</b></i></li>
   </div>
 </div>
 {{/each}}
 
-<div class="footer" style="background: rgb(75, 64, 64); padding:2px;";">
-        <p style="text-align: center; color: honeydew; padding: 1px">Thank you for visiting our site</p>
-    </div>
+<p style="text-align:center ;color: black; padding: 0px; position:relative; top: 120px;">Thank you for visiting our site...</p>
