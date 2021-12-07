@@ -5,3 +5,4 @@ It uses azure app service, azure database for mysql and text analytics cognitive
 And all the sample questions and answers are taken from quora for testing purpose.
 
 ![expressQA workflow](https://github.com/Deep-Chandra-Mathpal/expressQA/actions/workflows/main_expressqa.yml/badge.svg)
+![expressQA workflow](https://github.com/Deep-Chandra-Mathpal/expressQA/actions/workflows/node.js.yml.yml/badge.svg)
